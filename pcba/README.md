@@ -8,10 +8,11 @@ A collection of review checklists for electronics hardware development, covering
 
 | Checklist | Description |
 |-----------|-------------|
-| [Schematic Review](schematic-review-checklist.md) | Power architecture, component selection, connectors, signal integrity, protection, EMC, and cross-functional reviews |
-| [PCB Layout Review](pcb-layout-review-checklist.md) | Pre-layout mechanical coordination, placement, routing, DFM, signal integrity, and EMC |
-| [Library Review](library-review-checklist.md) | Schematic symbol and PCB footprint verification |
-| [Release Package](release-package-checklist.md) | Fabrication outputs, assembly outputs, BOM, and documentation for production release |
+| [Schematic Review](schematic-checklist.md) | Power architecture, component selection, connectors, signal integrity, protection, EMC, and cross-functional reviews |
+| [PCB Layout Review](pcb-checklist.md) | Pre-layout mechanical coordination, placement, routing, DFM, signal integrity, and EMC |
+| [Library Review](library-checklist.md) | Schematic symbol and PCB footprint verification |
+| [Release Package](release-checklist.md) | Fabrication outputs, assembly outputs, BOM, and documentation for production release |
+| [Pre-Assembly Verification](assembly-checklist.md) | Final "preflight" checks for the assembly package to prevent common manufacturing holds |
 | [Manufacturing Change Order (MCO)](mco-checklist.md) | Process for component substitutions, process changes, and AML updates |
 
 ---

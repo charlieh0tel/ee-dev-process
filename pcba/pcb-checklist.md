@@ -168,31 +168,51 @@
 
 ---
 
-## 8. Design for Manufacturing (DFM)
+## 8. Design for Manufacturability (DFM) & Assembly (DFA)
 
-### 8.1 Fabrication
-- [ ] Minimum trace width meets fab capability
-- [ ] Minimum spacing meets fab capability
-- [ ] Minimum drill size meets fab capability
-- [ ] Aspect ratio (board thickness : drill diameter) acceptable
-- [ ] Annular ring adequate
-- [ ] Solder mask openings adequate
-- [ ] Copper-to-edge clearance maintained
+### 8.1 DFM: Fabrication
+- [ ] **Trace & Spacing**:
+  - [ ] Minimum trace width meets or exceeds fabricator's standard capability (not just their premium limit).
+  - [ ] Minimum spacing meets or exceeds standard capability.
+  - [ ] No acute angles ("acid traps") in copper traces.
+  - [ ] Copper slivers and peelables eliminated.
+- [ ] **Drilling**:
+  - [ ] Minimum drill size meets standard capability.
+  - [ ] Aspect ratio (board thickness : drill diameter) is within standard limits.
+  - [ ] Annular ring is sufficient for all vias and pads (per IPC standards).
+- [ ] **Mask & Silkscreen**:
+  - [ ] Solder mask web/dam between fine-pitch pads is sufficient for the fabricator.
+  - [ ] Solder mask openings are appropriately sized (not too large or small).
+  - [ ] Silkscreen is clipped to avoid printing on pads.
+  - [ ] Minimum silkscreen feature width and height are legible.
+- [ ] **Clearances**:
+  - [ ] Copper-to-board-edge clearance is sufficient.
+  - [ ] Annular ring on NPTH mounting holes is appropriately sized for screw heads/hardware.
 
-### 8.2 Assembly
-- [ ] Component spacing adequate for assembly method
-- [ ] Fiducials placed for SMT (global and local if needed)
-- [ ] Solder paste apertures appropriate (modified as needed)
-- [ ] Thermal relief on large pads (wave solder)
-- [ ] Component orientation consistent for inspection
-- [ ] Tombstone risk mitigated (balanced pad thermals)
-- [ ] BGA escape routing complete with proper fanout
+### 8.2 DFA: Assembly
+- [ ] **Component Placement**:
+  - [ ] Component-to-component spacing is adequate for placement, inspection, and rework.
+  - [ ] Component-to-edge clearance meets assembly line requirements.
+  - [ ] Tall components do not block access to shorter components that may require rework.
+  - [ ] Small passive components are not placed in the "shadow" of large components for wave soldering.
+  - [ ] Component orientation is consistent (e.g., all polarized capacitors face the same direction) to aid inspection.
+- [ ] **Solderability & Process**:
+  - [ ] Tombstone risk is mitigated by balancing thermal mass on pads of small components.
+  - [ ] Thermal reliefs are used on pads connected to large copper planes to ensure proper soldering.
+  - [ ] Solder paste apertures are correctly defined (e.g., reduced for fine-pitch, window-paned for large thermal pads).
+  - [ ] BGA escape routing is complete with proper fanout and via types.
+  - [ ] Via-in-pad is only used where necessary and is specified to be filled and capped/plated over.
+- [ ] **Test & Inspection**:
+  - [ ] Test points are sized and spaced for the intended probe type (e.g., flying probe, bed-of-nails).
+  - [ ] Test points are not covered by components or silkscreen.
+  - [ ] Fiducials are placed for automated optical inspection (AOI) and placement machines (global for board, local for fine-pitch).
+  - [ ] Fiducials have adequate clearance from other features.
 
-### 8.3 Panel/Array
-- [ ] Panel size compatible with assembly equipment
-- [ ] Tooling holes and fiducials on panel rails
-- [ ] V-score or tab routing defined
-- [ ] Breakaway tabs located away from sensitive circuits
+### 8.3 Panelization
+- [ ] Panel size is compatible with assembly equipment.
+- [ ] Tooling holes and fiducials are present on panel rails ( breakaway strips).
+- [ ] Panel is designed for depaneling without stressing the PCB or components (V-score vs. tab routing).
+- [ ] Breakaway tabs are located away from sensitive circuits or fine-pitch components.
 
 ---
 
